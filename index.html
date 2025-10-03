@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enosh Osano – Software Engineer</title>
+
+  <!-- Google font & simple icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root{
+      --bg:#0d1117;
+      --card:#161b22;
+      --accent:#58a6ff;
+      --text:#c9d1d9;
+      --sub:#8b949e;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:var(--bg);color:var(--text);line-height:1.6;}
+    a{color:var(--accent);text-decoration:none;}
+    .container{width:90%;max-width:900px;margin:auto;padding:60px 0;}
+    header{text-align:center;margin-bottom:60px;}
+    header h1{font-size:2.5rem;font-weight:600;}
+    header p{font-size:1.1rem;color:var(--sub);}
+    .tagline{margin-top:8px;font-weight:300;}
+    .section-title{font-size:1.4rem;margin-bottom:20px;font-weight:600;position:relative;}
+    .section-title::after{content:'';width:40px;height:3px;background:var(--accent);position:absolute;left:0;bottom:-6px;border-radius:2px;}
+    .cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+    .card{background:var(--card);border-radius:8px;padding:25px;border:1px solid #30363d;}
+    .card h3{margin-bottom:10px;font-weight:600;}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+    .skills span{background:#21262d;padding:5px 12px;border-radius:4px;font-size:.85rem;}
+    footer{text-align:center;margin-top:60px;font-size:.9rem;color:var(--sub);}
+    .socials{margin-top:15px;font-size:1.3rem;}
+    .socials a{margin:0 10px;transition:transform .2s;}
+    .socials a:hover{transform:scale(1.2);}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Enosh Osano</h1>
+      <p class="tagline">Software Engineer & Cyber-security Enthusiast</p>
+    </header>
+
+    <section>
+      <h2 class="section-title">About</h2>
+      <p>
+        I build end-to-end web applications with the MERN stack and love diving into low-level security challenges.
+        When I’m not coding, you’ll find me sharpening my Linux skills, automating workflows in Python, or customizing Vim.
+      </p>
+    </section>
+
+    <section style="margin-top:40px;">
+      <h2 class="section-title">Skills</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Full-Stack Development</h3>
+          <p>MongoDB, Express, React, Node.js</p>
+        </div>
+        <div class="card">
+          <h3>Languages & Tools</h3>
+          <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Lua</span>
+            <span>Linux</span>
+            <span>Vim</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:40px;">
+      <h2 class="section-title">Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Secure File Vault</h3>
+          <p>End-to-end encrypted file storage with Node.js, React & AES-256-GCM. Includes secure share links and 2FA.</p>
+        </div>
+        <div class="card">
+          <h3>NetWatch</h3>
+          <p>Lightweight network intrusion detector written in Python & Lua, leveraging eBPF for real-time packet analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Want to collaborate or just say hi?</p>
+      <div class="socials">
+        <a href="https://github.com/xix-osano" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/enoshosano" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:osanoenosh@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p style="margin-top:20px;">&copy; <span id="yr"></span> Enosh Osanoc</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
